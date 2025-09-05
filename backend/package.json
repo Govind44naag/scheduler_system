@@ -15,14 +15,14 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
+    "@types/node": "^24.3.1",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "helmet": "^7.2.0",
     "knex": "^3.1.0",
     "morgan": "^1.10.1",
-    "pg": "^8.11.3",
-    "@types/node": "^20.19.13"
+    "pg": "^8.11.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
