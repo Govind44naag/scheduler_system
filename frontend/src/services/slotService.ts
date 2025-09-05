@@ -2,7 +2,7 @@ import axios from 'axios';
 import { CreateSlotData, UpdateSlotData, WeekSlots } from '../types';
 
 // Support both development and production environments
-const API_BASE_URL =  'http://localhost:5000/api/slots'
+const API_BASE_URL =  'https://scheduler-system.onrender.com/api/slots'
    
 
 export class SlotService {
