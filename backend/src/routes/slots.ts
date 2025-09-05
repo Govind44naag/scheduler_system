@@ -34,8 +34,7 @@ router.post('/', async (req, res) => {
     if (error.message === 'Maximum 2 slots allowed per day') {
       return res.status(400).json({ error: error.message });
     }
-    console.error('Error creating slot:', error);
-    res.status(500).json({ error: 'Failed to create slot' });
+     res.status(500).json({ error: 'Failed to create slot' });
   }
 });
 
@@ -51,8 +50,7 @@ router.get('/week', async (req, res) => {
     const slots = await SlotService.getWeekSlots(new Date(startDate as string));
     res.json(slots);
   } catch (error) {
-    console.error('Error fetching week slots:', error);
-    res.status(500).json({ error: 'Failed to fetch week slots' });
+     res.status(500).json({ error: 'Failed to fetch week slots' });
   }
 });
 
@@ -81,8 +79,7 @@ router.put('/:id', async (req, res) => {
     if (error.message === 'Slot not found') {
       return res.status(404).json({ error: error.message });
     }
-    console.error('Error updating slot:', error);
-    res.status(500).json({ error: 'Failed to update slot' });
+     res.status(500).json({ error: 'Failed to update slot' });
   }
 });
 
@@ -102,8 +99,7 @@ router.delete('/:id', async (req, res) => {
     if (error.message === 'Slot not found') {
       return res.status(404).json({ error: error.message });
     }
-    console.error('Error deleting slot:', error);
-    res.status(500).json({ error: 'Failed to delete slot' });
+     res.status(500).json({ error: 'Failed to delete slot' });
   }
 });
 
@@ -113,8 +109,7 @@ router.get('/', async (req, res) => {
     const slots = await SlotService.getAllSlots();
     res.json(slots);
   } catch (error) {
-    console.error('Error fetching all slots:', error);
-    res.status(500).json({ error: 'Failed to fetch slots' });
+     res.status(500).json({ error: 'Failed to fetch slots' });
   }
 });
 
@@ -128,8 +123,7 @@ router.delete('/recurring/:id', async (req, res) => {
     if (error.message === 'Slot not found') {
       return res.status(404).json({ error: error.message });
     }
-    console.error('Error deleting recurring slot:', error);
-    res.status(500).json({ error: 'Failed to delete recurring slot' });
+     res.status(500).json({ error: 'Failed to delete recurring slot' });
   }
 });
 

@@ -17,8 +17,7 @@ function App() {
       const slots = await SlotService.getWeekSlots(weekStart);
       setWeekSlots(slots);
     } catch (error) {
-      console.error('Error fetching week slots:', error);
-    } finally {
+     } finally {
       setIsLoading(false);
     }
   };

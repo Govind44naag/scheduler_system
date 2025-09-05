@@ -30,8 +30,7 @@ app.get('/health', (req, res) => {
 
 // Error handling middleware
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Something went wrong!' });
+   res.status(500).json({ error: 'Something went wrong!' });
 });
 
 // Start server
@@ -39,11 +38,9 @@ const startServer = async () => {
   try {
     await connectDB();
     app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
+     });
   } catch (error) {
-    console.error('Failed to start server:', error);
-    process.exit(1);
+     process.exit(1);
   }
 };
 
