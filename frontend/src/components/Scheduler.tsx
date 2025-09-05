@@ -1,5 +1,3 @@
-import React from 'react';
-import { format } from 'date-fns';
 import { WeekSlots } from '../types';
 import DayColumn from './DayColumn';
 
