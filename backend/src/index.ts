@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(helmet());
 app.use(cors({
-  origin:'http://localhost:3000',
+  origin:'https://scheduler-system-alpha.vercel.app',
   credentials:true,
 }));
 app.use(morgan('combined'));
